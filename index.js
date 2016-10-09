@@ -16,9 +16,10 @@ app.get('/api/:date', function (req, res) {
     res.json(ts.timestamp(req.params.date));
 });
 
-app.get('/new/:url', function(req, res) {
-    
-})
+/*app.get('/new/:url', function(req, res) {
+    var url = req.params.url;
+    res.redirect('http://google.com');
+});*/
 
 app.get('*', function(req, res) {
     res.send("Invalid page");
