@@ -1,7 +1,7 @@
 ## Getting Started
 
 To begin using this template, choose one of the following options to get started:
-* Clone the repo: `git clone https://github.com/huytr225/timestamp-api.git`
+* Clone the repo: `git clone https://github.com/huytr225/fcc-api-project.git`
 * Fork the repo
 
 ## Creator

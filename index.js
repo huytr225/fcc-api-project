@@ -1,5 +1,8 @@
 var express = require('express');
 var path    = require("path");
+var mongodb = require('mongodb');
+var shortid = require('shortid');
+var validUrl = require('valid-url');
 var app     = express();
 var port    = process.env.PORT || 8080;
 
@@ -16,23 +19,8 @@ app.get('/api/:date', function (req, res) {
     res.json(ts.timestamp(req.params.date));
 });
 
-app.get('/new/:url', function(req, res) {
-    function validURL(str) {
-        var expression = /https?:\/\/(?:www\.|(?!www))[^\s\.]+\.[^\s]{2,}|www\.[^\s]+\.[^\s]{2,}/gi;
-        var regex = new RegExp(expression);
-        return str.match(regex);
-    }
-    var url = req.params.url;
-    var response = {};
-    console.log(validURL(url));
-    if(validURL(url) == null){
-        response.error = "Wrong url format, make sure you have a valid protocol and real site.";
-        res.json(response);
-    }
-    else {
-        response['original_url'] = url;
-        res.json(response);
-    }
+app.get('/new/:url(*)', function(req, res) {
+    console.log(req.params);
     //res.redirect('http://google.com');
 });
 
