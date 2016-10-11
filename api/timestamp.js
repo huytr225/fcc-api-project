@@ -12,7 +12,6 @@ function unixtime(time) {
   return time.getTime()/1000;
 }
 
-
 exports.timestamp = function(date){
     var date1 = new Date(date);
     var date2 = new Date(date*1000);

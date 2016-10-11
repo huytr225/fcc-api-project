@@ -59,6 +59,9 @@
                         <a class="page-scroll" href="#rhp">Request Header Parser</a>
                     </li>
                     <li>
+                        <a class="page-scroll" href="#short-url">URL Shortener</a>
+                    </li>
+                    <li>
                         <a class="page-scroll" href="#contact">Contact</a>
                     </li>
                 </ul>
@@ -172,8 +175,62 @@
 }</pre>
             </blockquote>
         </div>
+        <div class="text-center">
+            <a href="#short-url" class="btn btn-primary btn-xl page-scroll sr-button">URL Shortener</a>
+        </div>
     </section>
 
+    <section id="short-url">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <hr class="primary">
+                    <h1 class="section-heading">API Basejump: URL Shortener Microservice</h1>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <blockquote>
+                User stories:
+                <ul>
+                    <li>
+                        I can pass a URL as a parameter and I will receive a shortened URL in the JSON response.
+                    </li>
+                    <li>
+                       When I visit that shortened URL, it will redirect me to my original link.
+                    </li>
+                </ul>
+            </blockquote>
+            <h2 class="section-heading">Example usage:</h2>
+            <blockquote>
+            <code><a href="https://api-huytr.herokuapp.com/new/https://www.google.com">https://api-huytr.herokuapp.com/new/https://www.google.com</a></code>
+            <br>
+            <code><a href="https://api-huytr.herokuapp.com/new/http://foo.com:80">https://api-huytr.herokuapp.com/new/http://foo.com:80</a></code>
+            </blockquote>
+            <p></p>
+            <h2 class="section-heading">Example output:</h2>
+            <blockquote>
+                <pre>
+{
+    "original_url": "https://www.google.com",
+    "short_url": "https://api-huytr.herokuapp.com/S10EOBqR"
+}</pre>
+            </blockquote>
+            <h2 class="section-heading">Usage:</h2>
+            <blockquote>
+            <code><a href="https://api-huytr.herokuapp.com/S10EOBqR">https://api-huytr.herokuapp.com/S10EOBqR</a></code>
+            </blockquote>
+            <h2 class="section-heading">Will redirect to:</h2>
+            <blockquote>
+            <code><a href="https://www.google.com">https://www.google.com</a></code>
+            </blockquote>
+        </div>
+        <!--<div class="text-center">
+            <a href="#rhp" class="btn btn-primary btn-xl page-scroll sr-button">Request Header Parser</a>
+        </div>-->
+    </section>
+    
     <aside class="bg-dark">
         <div class="container text-center">
             <div class="call-to-action">
@@ -197,7 +254,7 @@
                 </div>
                 <div class="col-lg-4 text-center">
                     <i class="fa fa-envelope-o fa-3x sr-contact"></i>
-                    <p><a href="mailto:your-email@your-domain.com">huytr225@gmail.com</a></p>
+                    <p><a href="mailto:huytr225@gmail.com">huytr225@gmail.com</a></p>
                 </div>
             </div>
         </div>
