@@ -62,6 +62,9 @@
                         <a class="page-scroll" href="#short-url">URL Shortener</a>
                     </li>
                     <li>
+                        <a class="page-scroll" href="#imagesearch">Image Search</a>
+                    </li>
+                    <li>
                         <a class="page-scroll" href="#contact">Contact</a>
                     </li>
                 </ul>
@@ -226,8 +229,77 @@
             <code><a href="https://www.google.com">https://www.google.com</a></code>
             </blockquote>
         </div>
+        <div class="text-center">
+            <a href="#imagesearch" class="btn btn-primary btn-xl page-scroll sr-button">Image Search</a>
+        </div>
+    </section>
+    
+    <section id="imagesearch">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <hr class="primary">
+                    <h1 class="section-heading">API Basejump: Image Search Abstraction Layer</h1>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <blockquote>
+                User stories:
+                <ul>
+                    <li>
+                        I can get the image URLs, alt text and page urls for a set of images relating to a given search string.
+                    </li>
+                    <li>
+                        I can paginate through the responses by adding a ?offset=2 parameter to the URL.
+                    </li>
+                    <li>
+                        I can get a list of the most recently submitted search strings.
+                    </li>
+                </ul>
+            </blockquote>
+            <h2 class="section-heading">Example Search Usage:</h2>
+            <blockquote>
+            <code><a href="https://api-huytr.herokuapp.com/api/imagesearch/lolcats%20funny?offset=10">https://api-huytr.herokuapp.com/api/imagesearch/lolcats%20funny?offset=10</a></code>
+            </blockquote>
+            <p></p>
+            <h2 class="section-heading">Example output:</h2>
+            <blockquote>
+            <pre>
+[
+  {
+    "url": "http://4.bp.blogspot.com/-epxUtTpidgM/Tl0LrfIwPOI/AAAAAAAAdOY/rwZA0Zb_jWg/s1600/lolcats5.jpg",
+    "snippet": "Hilarious LOLcats Seen On www.coolpicturegallery.us",
+    "thumbnail": "http://ts3.mm.bing.net/th?id=OIP.Mb796e2f7a6f4001d32c898791a7c4921H0&pid=15.1",
+    "context": "http://coolanimalspics.blogspot.com/2011/08/hilarious-lolcats.html"
+  },
+  {
+    "url": "http://www.dumpaday.com/wp-content/uploads/2012/12/funny-lolcats.jpg",
+    "snippet": "tagged with funny pictures 28 pics funny pictures",
+    "thumbnail": "http://ts2.mm.bing.net/th?id=OIP.M458d6d7c38dfd8f66c87f7bf8fc39c64o0&pid=15.1",
+    "context": "http://dumpaday.com/random-pictures/funny-pictures/random-funny-pictures-28-pics-2"
+  },... many more results
+]</pre>
+            </blockquote>
+<h2 class="section-heading">Example usage:</h2>
+            <blockquote>
+            <code><a href="https://api-huytr.herokuapp.com/api/latest/imagesearch">https://api-huytr.herokuapp.com/api/latest/imagesearch</a></code>
+            </blockquote>
+            <p></p>
+            <h2 class="section-heading">Example output:</h2>
+            <blockquote>
+            <pre>
+[
+  {
+    "term": "lolcats funny",
+    "date": "2016-05-22T14:27:06.859Z"
+  }
+]</pre>
+            </blockquote>
+        </div>
         <!--<div class="text-center">
-            <a href="#rhp" class="btn btn-primary btn-xl page-scroll sr-button">Request Header Parser</a>
+            <a href="#short-url" class="btn btn-primary btn-xl page-scroll sr-button">URL Shortener</a>
         </div>-->
     </section>
     
