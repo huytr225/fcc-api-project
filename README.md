@@ -10,3 +10,7 @@ API was created by and is maintained by **Huy Tran**.
 
 * https://facebook.com/dinhhuyy
 * https://github.com/huytr225/
+
+## Deploy
+
+* https://api-huytr.herokuapp.com/
